@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Explore Taniti</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="../index.html">Taniti Tourism</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="plan.html">Plan</a></li>
+          <li class="nav-item"><a class="nav-link active" href="explore.html">Explore</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="py-5 text-center bg-light">
+    <div class="container">
+      <h1 class="display-5 fw-bold">Explore Taniti</h1>
+      <p class="lead">Discover the island's highlights, Merriton Landing, gallery, and testimonials.</p>
+    </div>
+  </header>
+
+  <!-- Island Highlights Section -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="mb-4 text-center">Island Highlights</h2>
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <!-- Highlight Card with Modal -->
+        <div class="col">
+          <div class="card h-100">
+            <img src="/assets/images/taniti-volcano.png" class="card-img-top" alt="Active Volcano">
+            <div class="card-body">
+              <h5 class="card-title">Active Volcano</h5>
+              <p class="card-text">Visit Taniti's iconic active volcano.</p>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#volcanoModal">Learn More</button>
+            </div>
+          </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="volcanoModal" tabindex="-1" aria-labelledby="volcanoModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="volcanoModalLabel">Active Volcano</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body">
+                Experience breathtaking views and guided hikes to Taniti's active volcano, a must-see attraction for adventure lovers.
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card h-100">
+            <img src="/assets/images/taniti-forest.jpg" class="card-img-top" alt="Rainforest">
+            <div class="card-body">
+              <h5 class="card-title">Rainforest Tours</h5>
+              <p class="card-text">Tour the lush Taniti rainforests.</p>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#rainforestModal">Learn More</button>
+            </div>
+          </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="rainforestModal" tabindex="-1" aria-labelledby="rainforestModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="rainforestModalLabel">Rainforest Tours</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body">
+                Experience breathtaking views and guided hikes through the lush rainforests, a must-see attraction for nature lovers.
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Merriton Landing Section -->
+  <section class="py-5 text-white" style="background: url('/assets/images/merriton-landing.png') center center / cover no-repeat;">
+    <div class="container text-center" style="background-color: rgba(0,0,0,0.5); padding: 2rem;">
+      <h2 class="mb-4">Merriton Landing</h2>
+      <p class="lead">A rapidly developing area featuring shops, restaurants, and entertainment.</p>
+      <button type="button" class="btn btn-outline-light" data-bs-toggle="popover" title="Merriton Landing Info" data-bs-content="Enjoy local pubs, microbreweries, dance clubs, art galleries, and more in Merriton Landing.">Learn More</button>
+    </div>
+  </section>
+
+
+  <!-- Initialize Popover -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+      var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+        return new bootstrap.Popover(popoverTriggerEl)
+      })
+    });
+  </script>
+
+  <!-- Gallery Carousel -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="mb-4 text-center">Gallery</h2>
+      <div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="/assets/images/beach-1824855.jpg" class="d-block w-100" alt="Taniti Beach">
+          </div>
+          <div class="carousel-item">
+            <img src="/assets/images/taniti-forest.jpg" class="d-block w-100" alt="Taniti Rainforest">
+          </div>
+          <div class="carousel-item">
+            <img src="/assets/images/merriton-landing.png" class="d-block w-100" alt="Taniti City">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <h2 class="mb-4 text-center">Testimonials</h2>
+      <div class="row row-cols-1 row-cols-md-2 g-4">
+        <!-- Testimonial Card -->
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-body">
+              <blockquote class="blockquote mb-0">
+                <p>"Taniti was the perfect tropical getaway. We loved the beaches and the food!"</p>
+                <footer class="blockquote-footer">Sarah M.</footer>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+        <!-- Repeat for additional testimonials -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-primary text-white text-center py-3 mt-5">
+    <div class="container">
+      <p class="mb-0">&copy; 2025 Taniti Tourism. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

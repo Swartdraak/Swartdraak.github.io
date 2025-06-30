@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Plan Your Trip - Taniti</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="../index.html">Taniti Tourism</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link active" href="plan.html">Plan</a></li>
+          <li class="nav-item"><a class="nav-link" href="explore.html">Explore</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="py-5 text-center bg-light">
+    <div class="container">
+      <h1 class="display-5 fw-bold">Plan Your Trip</h1>
+      <p class="lead">Explore accommodations, dining, transportation, and FAQs to prepare for your visit.</p>
+    </div>
+  </header>
+
+  <!-- Tabs Section -->
+  <section class="py-5">
+    <div class="container">
+      <ul class="nav nav-tabs" id="planTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="accommodation-tab" data-bs-toggle="tab" data-bs-target="#accommodation" type="button" role="tab">Accommodations</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="dining-tab" data-bs-toggle="tab" data-bs-target="#dining" type="button" role="tab">Dining</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="transportation-tab" data-bs-toggle="tab" data-bs-target="#transportation" type="button" role="tab">Transportation</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="faq-tab" data-bs-toggle="tab" data-bs-target="#faq" type="button" role="tab">FAQs</button>
+        </li>
+      </ul>
+
+      <div class="tab-content pt-4" id="planTabContent">
+        <!-- Accommodations Tab -->
+        <div class="tab-pane fade show active" id="accommodation" role="tabpanel">
+          <div class="row row-cols-1 row-cols-md-3 g-4">
+            <!-- Resort Card with Modal -->
+            <div class="col">
+              <div class="card h-100">
+                <img src="../assets/images/resort.png" class="card-img-top" alt="Four-Star Resort">
+                <div class="card-body">
+                  <h5 class="card-title">Four-Star Resort</h5>
+                  <p class="card-text">Luxurious beachfront resort with full amenities.</p>
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#resortModal">View Details</button>
+                </div>
+              </div>
+            </div>
+            <div class="modal fade" id="resortModal" tabindex="-1" aria-labelledby="resortModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="resortModalLabel">Four-Star Resort</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                  </div>
+                  <div class="modal-body">
+                    This resort offers ocean views, private pools, spa services, and fine dining restaurants.
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Hostel Card with Modal -->
+            <div class="col">
+              <div class="card h-100">
+                <img src="../assets/images/hostel.png" class="card-img-top" alt="Budget Hostel">
+                <div class="card-body">
+                  <h5 class="card-title">Beach-Side Hostel</h5>
+                  <p class="card-text">Inexpensive Hostel.</p>
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#hostelModal">View Details</button>
+                </div>
+              </div>
+            </div>
+            <div class="modal fade" id="hostelModal" tabindex="-1" aria-labelledby="hostelModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="hostelModalLabel">Beach-Side Hostel</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                  </div>
+                  <div class="modal-body">
+                    This hostel offers ocean views, balconies, and fine dining restaurants nearby.
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- BNB Card with Modal -->
+            <div class="col">
+              <div class="card h-100">
+                <img src="../assets/images/bnb.png" class="card-img-top" alt="Family Owned BNB">
+                <div class="card-body">
+                  <h5 class="card-title">Family Owned BNB</h5>
+                  <p class="card-text">Bed and Breakfast.</p>
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bnbModal">View Details</button>
+                </div>
+              </div>
+            </div>
+            <div class="modal fade" id="bnbModal" tabindex="-1" aria-labelledby="bnbModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="bnbModalLabel">Family Owned BNB</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                  </div>
+                  <div class="modal-body">
+                    This Bed and Breakfast offers ocean views, patio seating, and friendly owners.
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dining Tab -->
+        <div class="tab-pane fade" id="dining" role="tabpanel">
+          <div class="row row-cols-1 row-cols-md-3 g-4">
+            <!--  Seafood Restaurant Cards with Popover -->
+            <div class="col">
+              <div class="card h-100">
+                <img src="../assets/images/seafood-restaurant.png" class="card-img-top" alt="Local Seafood Restaurant">
+                <div class="card-body">
+                  <h5 class="card-title">Local Seafood</h5>
+                  <p class="card-text">Fresh fish and rice dishes from local catches.</p>
+                  <button type="button" class="btn btn-secondary" data-bs-toggle="popover" data-bs-content="Open daily from 11am-10pm. Reservations recommended.">Hours & Info</button>
+                </div>
+              </div>
+            </div>
+            
+            <!--  American Restaurant Cards with Popover -->
+            <div class="col">
+              <div class="card h-100">
+                <img src="../assets/images/american-diner.png" class="card-img-top" alt="American Cuisine Restaurant">
+                <div class="card-body">
+                  <h5 class="card-title">American Cuisine</h5>
+                  <p class="card-text">All your Favorites with an Island Twist.</p>
+                  <button type="button" class="btn btn-secondary" data-bs-toggle="popover" data-bs-content="Open daily from 11am-10pm. Reservations recommended.">Hours & Info</button>
+                </div>
+              </div>
+            </div>
+            
+            <!--  Pan-Asian Restaurant Cards with Popover -->
+            <div class="col">
+              <div class="card h-100">
+                <img src="../assets/images/pan-asian-restaurant.png" class="card-img-top" alt="Pan-Asian Restaurant">
+                <div class="card-body">
+                  <h5 class="card-title">Pan-Asian Food</h5>
+                  <p class="card-text">Assorted Pan Fried Asian Cuisine.</p>
+                  <button type="button" class="btn btn-secondary" data-bs-toggle="popover" data-bs-content="Open daily from 11am-10pm. Reservations recommended.">Hours & Info</button>
+                </div>
+              </div>
+            </div>
+            <!-- Initialize Popover -->
+            <script>
+              document.addEventListener('DOMContentLoaded', function () {
+                var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+                var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+                  return new bootstrap.Popover(popoverTriggerEl)
+                })
+              });
+            </script>
+          </div>
+        </div>
+
+        <!-- Transportation Tab -->
+        <div class="tab-pane fade" id="transportation" role="tabpanel">
+          <div class="row row-cols-1 row-cols-md-3 g-4">
+            <!-- Taxi Transportation Card with Tooltip -->
+            <div class="col">
+              <div class="card h-100">
+                <img src="/assets/images/taxi.png" class="card-img-top" alt="Taxi Service">
+                <div class="card-body">
+                  <h5 class="card-title">Taxis</h5>
+                  <p class="card-text">Available throughout Taniti City for quick travel.</p>
+                  <button type="button" class="btn btn-info" data-bs-toggle="tooltip" title="Fares vary by distance. Ask your driver for rates.">Tip</button>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Bus Transportation Card with Tooltip -->
+            <div class="col">
+              <div class="card h-100">
+                <img src="/assets/images/buses.png" class="card-img-top" alt="Bus Service">
+                <div class="card-body">
+                  <h5 class="card-title">Buses</h5>
+                  <p class="card-text">Available throughout Taniti City for quick travel.</p>
+                  <button type="button" class="btn btn-info" data-bs-toggle="tooltip" title="Public buses serve Taniti City and run from 5 a.m. to 11 p.m">Tip</button>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Bike Transportation Card with Tooltip -->
+            <div class="col">
+              <div class="card h-100">
+                <img src="/assets/images/bikes.png" class="card-img-top" alt="Bike Rentals">
+                <div class="card-body">
+                  <h5 class="card-title">Bicycles</h5>
+                  <p class="card-text">Available throughout Taniti City for quick travel.</p>
+                  <button type="button" class="btn btn-info" data-bs-toggle="tooltip" title="Bikes and helmets are available to rent from several vendors (helmets are required by law).">Tip</button>
+                </div>
+              </div>
+            </div>
+            <!-- Initialize Tooltip -->
+            <script>
+              document.addEventListener('DOMContentLoaded', function () {
+                var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+                var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+                  return new bootstrap.Tooltip(tooltipTriggerEl)
+                })
+              });
+            </script>
+            <!-- Repeat similar cards for buses, rentals, bikes -->
+          </div>
+        </div>
+
+        <!-- FAQs Tab -->
+        <div class="tab-pane fade" id="faq" role="tabpanel">
+          <div class="accordion" id="faqAccordion">
+            <!-- FAQ -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faqOneHeader">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqOne" aria-expanded="false" aria-controls="faqOne">
+                  What type of power outlet is used locally?
+                </button>
+              </h2>
+              <div id="faqOne" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Power outlets are 120 volts (the same as in the United States).
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faqTwoHeader">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqTwo" aria-expanded="false" aria-controls="faqTwo">
+                  Are there restrictions on purchasing alcohol?
+                </button>
+              </h2>
+              <div id="faqTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Alcohol is not allowed to be served or sold between the hours of midnight and 9:00 a.m.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faqThreeHeader">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqThree" aria-expanded="false" aria-controls="faqThree">
+                  What is the local language?
+                </button>
+              </h2>
+              <div id="faqThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Many younger Tanitians speak fluent English. Very little English is spoken in rural areas, especially by the older residents.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faqFourHeader">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqFour" aria-expanded="false" aria-controls="faqFour">
+                  Are medical services nearby?
+                </button>
+              </h2>
+              <div id="faqFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  There is one hospital and several clinics. The hospital has many multilingual employees.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faqFiveHeader">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqFive" aria-expanded="false" aria-controls="faqFive">
+                  What is the drinking age in Taniti?
+                </button>
+              </h2>
+              <div id="faqFive" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  The drinking age is 18, though it is not strictly enforced.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faqSixHeader">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqSix" aria-expanded="false" aria-controls="faqSix">
+                  How often does crime happen?
+                </button>
+              </h2>
+              <div id="faqSix" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Violent crime is very rare on Taniti, but as tourism increases, there are more reports of pickpocketing and other petty crimes.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faqSevenHeader">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqSeven" aria-expanded="false" aria-controls="faqSeven">
+                  Are facilities open during local holidays?
+                </button>
+              </h2>
+              <div id="faqSeven" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Taniti enjoys a large number of national holidays, and many tourist attractions and restaurants will be closed on holidays, so visitors should plan accordingly.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faqEightHeader">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqEight" aria-expanded="false" aria-controls="faqEight">
+                  What is the local currency, is foreign money accetped?
+                </button>
+              </h2>
+              <div id="faqEight" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Taniti uses the U.S. dollar as its currency, but many businesses will also accept euros and yen. Several banks facilitate currency exchange, and many businesses accept major credit cards.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-primary text-white text-center py-3 mt-5">
+    <div class="container">
+      <p class="mb-0">&copy; 2025 Taniti Tourism. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
