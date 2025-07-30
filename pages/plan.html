@@ -147,76 +147,147 @@
           <!-- Dining Tab -->
           <div class="tab-pane fade" id="dining" role="tabpanel">
             <div class="row row-cols-1 row-cols-md-3 g-4">
-              <!--  Seafood Restaurant Cards with Popover -->
+              <!--  Seafood Restaurant Card with modal -->
               <div class="col">
                 <div class="card h-100">
                   <img src="../assets/images/seafood-restaurant.png" class="card-img-top" alt="Local Seafood Restaurant">
                   <div class="card-body">
                     <h5 class="card-title">Local Seafood</h5>
                     <p class="card-text">Fresh fish and rice dishes from local catches.</p>
-                    <button type="button" class="btn btn-secondary" data-bs-toggle="popover" data-bs-content="Open daily from 11am-10pm. Reservations recommended.">Hours & Info</button>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#seafoodModal">Hours & Info</button>
+                  </div>
+                </div>
+              </div>
+              <div class="modal fade" id="seafoodModal" tabindex="-1" aria-labelledby="seafoodModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="seafoodModalLabel">Seafood Restaurant</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                      Open daily from 11am-10pm. Reservations recommended.
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
                   </div>
                 </div>
               </div>
               
-              <!--  American Restaurant Cards with Popover -->
+              <!--  American Restaurant Card with modal -->
               <div class="col">
                 <div class="card h-100">
                   <img src="../assets/images/american-diner.png" class="card-img-top" alt="American Cuisine Restaurant">
                   <div class="card-body">
-                    <h5 class="card-title">American Cuisine</h5>
+                    <h5 class="card-title">Amcerican Cuisine</h5>
                     <p class="card-text">All your Favorites with an Island Twist.</p>
-                    <button type="button" class="btn btn-secondary" data-bs-toggle="popover" data-bs-content="Open daily from 11am-10pm. Reservations recommended.">Hours & Info</button>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#americanModal">Hours & Info</button>
+                  </div>
+                </div>
+              </div>
+              <div class="modal fade" id="americanModal" tabindex="-1" aria-labelledby="americanModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="americanModalLabel">American Cuisine</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                      Open daily from 11am-10pm. Reservations recommended.
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
                   </div>
                 </div>
               </div>
               
-              <!--  Pan-Asian Restaurant Cards with Popover -->
+              <!--  Pan-Asian Restaurant Card with modal -->
               <div class="col">
                 <div class="card h-100">
                   <img src="../assets/images/pan-asian-restaurant.png" class="card-img-top" alt="Pan-Asian Restaurant">
                   <div class="card-body">
                     <h5 class="card-title">Pan-Asian Food</h5>
-                    <p class="card-text">Assorted Pan Fried Asian Cuisine.</p>
-                    <button type="button" class="btn btn-secondary" data-bs-toggle="popover" data-bs-content="Open daily from 11am-10pm. Reservations recommended.">Hours & Info</button>
+                    <p class="card-text">Assorted Pan Fried Asian Cuisine</p>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#asianModal">Hours & Info</button>
                   </div>
                 </div>
               </div>
-              <!-- Initialize Popover -->
-              <script>
-                document.addEventListener('DOMContentLoaded', function () {
-                  var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
-                  var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
-                    return new bootstrap.Popover(popoverTriggerEl)
-                  })
-                });
-              </script>
+              <div class="modal fade" id="asianModal" tabindex="-1" aria-labelledby="asianModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="asianModalLabel">Pan-Asian Food</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                      Open daily from 11am-10pm. Reservations recommended.
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
           <!-- Transportation Tab -->
           <div class="tab-pane fade" id="transportation" role="tabpanel">
             <div class="row row-cols-1 row-cols-md-3 g-4">
-              <!-- Taxi Transportation Card with Tooltip -->
+              <!-- Taxi Transportation Card with modal -->
               <div class="col">
                 <div class="card h-100">
-                  <img src="/assets/images/taxi.png" class="card-img-top" alt="Taxi Service">
+                  <img src="../assets/images/taxi.png" class="card-img-top" alt="Taxi Service">
                   <div class="card-body">
                     <h5 class="card-title">Taxis</h5>
                     <p class="card-text">Available throughout Taniti City for quick travel.</p>
-                    <button type="button" class="btn btn-info" data-bs-toggle="tooltip" title="Fares vary by distance. Ask your driver for rates.">Taxi Tip</button>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#taxiModal">Taxi Tip</button>
+                  </div>
+                </div>
+              </div>
+              <div class="modal fade" id="taxiModal" tabindex="-1" aria-labelledby="taxiModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="taxiModalLabel">Taxi Tip</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                      Fares vary by distance. Ask your driver for rates.
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
                   </div>
                 </div>
               </div>
               
-              <!-- Bus Transportation Card with Tooltip -->
+              <!-- Bus Transportation Card with modal -->
               <div class="col">
                 <div class="card h-100">
-                  <img src="/assets/images/buses.png" class="card-img-top" alt="Bus Service">
+                  <img src="../assets/images/buses.png" class="card-img-top" alt="Bus Service">
                   <div class="card-body">
                     <h5 class="card-title">Buses</h5>
                     <p class="card-text">Available throughout Taniti City for quick travel.</p>
-                    <button type="button" class="btn btn-info" data-bs-toggle="tooltip" title="Public buses serve Taniti City and run from 5 a.m. to 11 p.m">Bus Tip</button>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#busModal">Bus Tip</button>
+                  </div>
+                </div>
+              </div>
+              <div class="modal fade" id="busModal" tabindex="-1" aria-labelledby="busModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="busModalLabel">Bus Tip</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                      Public buses serve Taniti City and run from 5 a.m. to 11 p.m
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -224,24 +295,30 @@
               <!-- Bike Transportation Card with Tooltip -->
               <div class="col">
                 <div class="card h-100">
-                  <img src="/assets/images/bikes.png" class="card-img-top" alt="Bike Rentals">
+                  <img src="../assets/images/bikes.png" class="card-img-top" alt="Bike Rentals">
                   <div class="card-body">
                     <h5 class="card-title">Bicycles</h5>
                     <p class="card-text">Available throughout Taniti City for quick travel.</p>
-                    <button type="button" class="btn btn-info" data-bs-toggle="tooltip" title="Bikes and helmets are available to rent from several vendors (helmets are required by law).">Bike Tip</button>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bikeModal">Bike Tip</button>
                   </div>
                 </div>
               </div>
-              <!-- Initialize Tooltip -->
-              <script>
-                document.addEventListener('DOMContentLoaded', function () {
-                  var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-                  var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-                    return new bootstrap.Tooltip(tooltipTriggerEl)
-                  })
-                });
-              </script>
-              <!-- Repeat similar cards for buses, rentals, bikes -->
+              <div class="modal fade" id="bikeModal" tabindex="-1" aria-labelledby="bikeModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="bikeModalLabel">Bike Tip</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                      Bikes and helmets are available to rent from several vendors (helmets are required by law).
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
