@@ -61,28 +61,62 @@
           <button class="btn btn-primary" type="submit">Submit</button>
         </form>
       </div>
+      <div class="modal fade" id="thankYouModal" tabindex="-1" aria-labelledby="thankYouModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content text-dark">
+            <div class="modal-header">
+              <h5 class="modal-title" id="thankYouModalLabel">Thank You</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              Your message has been received. We will respond shortly.
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Contact Form Validation Script -->
     <script>
-      (() => {
-        'use strict';
+      document.addEventListener('DOMContentLoaded', () => {
         const forms = document.querySelectorAll('.needs-validation');
-        Array.from(forms).forEach(form => {
+        const thankYouModalEl = document.getElementById('thankYouModal');
+
+        function isValidEmail(email) {
+          // Requires something@something.TLD (e.g. john@example.com)
+          const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-z]{2,}$/;
+          return regex.test(email);
+        }
+
+        forms.forEach(form => {
           form.addEventListener('submit', event => {
-            event.preventDefault(); // Prevent actual submission for prototype
+            event.preventDefault();
 
-            if (!form.checkValidity()) {
-              event.stopPropagation(); // Show validation errors if invalid
+            const emailInput = form.querySelector('#email');
+            const emailValue = emailInput.value.trim();
+
+            // Temporarily remove previous custom error
+            emailInput.setCustomValidity('');
+
+            if (!form.checkValidity() || !isValidEmail(emailValue)) {
+              if (!isValidEmail(emailValue)) {
+                emailInput.setCustomValidity('Please enter a valid email address with a full domain.');
+              }
+              form.classList.add('was-validated');
+              event.stopPropagation();
+            } else {
+              const modal = new bootstrap.Modal(thankYouModalEl);
+              modal.show();
+              form.classList.add('was-validated');
             }
-
-            form.classList.add('was-validated'); // Add Bootstrap validation styles
-          }, false);
+          });
         });
-      })();
+
+        thankYouModalEl.addEventListener('hidden.bs.modal', () => {
+          location.reload();
+        });
+      });
     </script>
-
-
 
     <!-- Footer -->
     <footer class="bg-primary text-white text-center py-3 mt-5">
