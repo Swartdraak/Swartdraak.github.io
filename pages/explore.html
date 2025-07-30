@@ -133,7 +133,23 @@
       <div class="container text-center" style="background-color: rgba(0,0,0,0.5); padding: 2rem;">
         <h2 class="mb-4">Merriton Landing</h2>
         <p class="lead">A rapidly developing area featuring shops, restaurants, and entertainment.</p>
-        <button type="button" class="btn btn-outline-light" data-bs-toggle="popover" title="Merriton Landing Info" data-bs-content="Enjoy local pubs, microbreweries, dance clubs, art galleries, and more in Merriton Landing.">Learn More</button>
+        <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#merritonLandingModal">Learn More</button>
+      </div>
+      <div class="modal fade" id="merritonLandingModal" tabindex="-1" aria-labelledby="merritonLandingModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="merritonLandingModalLabel">Merriton Landing Information</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                Enjoy local pubs, microbreweries, dance clubs, art galleries, and more in Merriton Landing.
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
